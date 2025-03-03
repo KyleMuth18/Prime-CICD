@@ -1,5 +1,3 @@
-import sys
-
 def is_prime(n):
     if n < 2:
         return False
@@ -18,14 +16,6 @@ def generate_primes(n):
     return primes
 
 if __name__ == "__main__":
-    print("Starting prime calculation...")  # ✅ Debug message
-    
-    n = 5  # ✅ Automatically set n to 5 instead of requiring input
-    
-    # ✅ Write output to a file for automated verification
-    with open("/home/ubuntu/prime/output.txt", "w") as f:
-        f.write("Starting prime calculation...\n")
-        f.write(f"First {n} prime numbers: {generate_primes(n)}\n")
-    
-    # ✅ Also print output to console for verification
+    print("Starting prime calculation...")  # Debug statement
+    n = int(input("Enter the number of primes to generate: "))
     print(f"First {n} prime numbers: {generate_primes(n)}")
