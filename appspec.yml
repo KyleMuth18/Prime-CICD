@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/prime
+hooks:
+  ApplicationStart:
+    - location: scripts/start.sh
+      timeout: 30
+      runas: ubuntu
